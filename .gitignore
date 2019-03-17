@@ -108,3 +108,8 @@ venv.bak/
 ACMMM*
 SCUT*
 *dataset*
+*temp*
+*Copy*
+*.h5
+*.mdl
+
