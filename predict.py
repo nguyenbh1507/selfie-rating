@@ -12,7 +12,7 @@ def predict(model, img):
     """
     Calculate prediction score of `model` over a `img` file
     """
-    imgA = cv2.imread(img)
+    imgA = plt.imread(img)
     imgA = cv2.resize(imgA, (224, 224))/255.0
     return model.predict(imgA.reshape(1,224,224,3))
 
@@ -37,6 +37,7 @@ print("Predicted in {} seconds".format(int(time.time()-start)))
 
 # Get top 5
 top5 = sorted(test_results, key=lambda x: x[1], reverse=True)[:5]
+print(top5)
 # show the results
 i = 1
 plt.figure(figsize=(15,10))
